@@ -57,7 +57,7 @@ app.post('/checkout', async (req, res) => {
     const infoOwner = await transporter.sendMail({
       from: `"MUSE.holiday Biancheria Garda" <${process.env.SMTP_USER}>`,
       to:   process.env.SHOP_EMAIL,
-      cc:   'info@muse.holiday',
+      cc:   'garda@muse.holiday',
       subject: `Ordine ricevuto: ${name}`,
       html:    summaryHtml
     });
